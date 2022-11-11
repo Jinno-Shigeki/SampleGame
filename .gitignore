@@ -190,6 +190,11 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
 # Crashlytics generated file
 crashlytics-build.properties
 
