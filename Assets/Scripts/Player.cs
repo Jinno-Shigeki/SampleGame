@@ -69,5 +69,10 @@ public class Player : MonoBehaviour
  
         // Move は指定したベクトルだけ移動させる命令
         con.Move(moveDirection * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Debug.Log("bang");
+        }
     }
 }
