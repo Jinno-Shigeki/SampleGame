@@ -75,4 +75,7 @@ public class Player : MonoBehaviour
             Debug.Log("bang");
         }
     }
+    void ButtonTap() {
+        Debug.Log("button tap");
+    }
 }
