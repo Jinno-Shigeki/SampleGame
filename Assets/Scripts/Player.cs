@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
  
         // マウスカーソルを非表示にし、位置を固定
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
        
         startPos = transform.position;
     }
