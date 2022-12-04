@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
+using Asset.Scripts.ResourceManager;
 
 public class GameManager : Singleton<GameManager>
 {
-    /// <summary>
-    /// Score
-    /// </summary>
-    public int Score { get; private set; }
-
+    private ResourceManager _resouceManager;
     void Start()
     {
-        var blueBox = Addressables.InstantiateAsync("BlueBox");
-        var player = Addressables.InstantiateAsync("Player");
-        Debug.Log("aaaa");
+        var playerResource = _resouceManager.GetResourceName(0);
+        Addressables.InstantiateAsync(playerResource);
     }
 
     void Update()
     {
         
+    }
+
+    protected override void Init()
+    {
+        base.Init();
+        _resouceManager = ResourceManager.Instance;
     }
 }
